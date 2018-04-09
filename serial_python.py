@@ -4,9 +4,6 @@ import time
 try:
     
     arduino = serial.Serial('COM3', baudrate=9600, timeout=200.0)
-
-    # Nota: provocamos un reseteo manual de la placa para leer desde
-    # el principio, ver http://stackoverflow.com/a/21082531/554319
     arduino.setDTR(False)
     time.sleep(1)
     arduino.flushInput()

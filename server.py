@@ -15,7 +15,7 @@ def hello():
 
 @app.route('/sketch.js')
 def sketch():
-    return render_template('sketch.js')
+    return render_template('scripts/sketch.js')
 
 @app.route('/index')
 def index():
@@ -23,7 +23,7 @@ def index():
 
 @app.route('/p5.min.js')
 def p5():
-    return render_template('p5.min.js')    
+    return render_template('scripts/p5.min.js')    
 
 if __name__ == '__main__':
     app.run("localhost", 8080)
